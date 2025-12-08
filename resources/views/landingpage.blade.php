@@ -279,7 +279,7 @@
       prosedur yang telah ditetapkan oleh tim K3. Simulasi dan pelatihan rutin dilakukan untuk memastikan kesiapan seluruh tim.
     </p>
     <div class="text-center mt-4">
-      <a href="https://www.youtube.com/results?search_query=SOP+K3+Kimia+Farma" target="_blank" class="btn btn-danger">
+      <a href="https://youtu.be/vUvjmfwFNc0?si=yJeGhahL14JsF3_3" target="_blank" class="btn btn-danger">
         Lihat Video SOP K3
       </a>
     </div>
