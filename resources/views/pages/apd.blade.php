@@ -64,7 +64,7 @@
 
     <!-- Hero-like Intro Section -->
     <section class="bg-light py-5">
-        <div class="container text-center">
+        <div class="container text-center max-w-5xl mx-auto py-5 pt-5 mt-5">
             <h1 class="display-4 fw-bold text-primary mb-3">Alat Pelindung Diri <br>(APD)</h1>
             <p class="lead text-muted">PT Kimia Farma menerapkan APD sesuai Undang-Undang No. 1 Tahun 1970 tentang Keselamatan Kerja dan PP No. 50 Tahun 2012 tentang Penerapan SMK3. APD wajib digunakan untuk melindungi pekerja dari bahaya kimia, fisik, dan biologis di lingkungan kerja, termasuk area produksi, laboratorium, dan gudang B3.</p>
         </div>
