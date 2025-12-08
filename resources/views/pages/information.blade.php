@@ -62,7 +62,7 @@
 
     <!-- Hero-like Intro Section -->
     <section class="bg-light py-5">
-        <div class="container text-center">
+        <div class="container text-center max-w-5xl mx-auto py-5 pt-5 mt-5">
             <h1 class="display-4 fw-bold text-primary mb-3">Landasan Hukum K3</h1>
             <p class="lead text-muted">PT Kimia Farma Sejahtera menerapkan Sistem Manajemen Kesehatan dan Keselamatan Kerja (SMK3) <br> sesuai peraturan perundangan yang berlaku</p>
         </div>

@@ -59,7 +59,7 @@
 
     <!-- Hero-like Intro Section -->
     <section class="bg-light py-5">
-        <div class="container text-center">
+        <div class="container text-center max-w-5xl mx-auto py-5 pt-5 mt-5">
             <h1 class="display-4 fw-bold text-primary mb-3">Prosedur Darurat</h1>
             <p class="lead text-muted">PT Kimia Farma menerapkan prosedur darurat untuk mengantisipasi berbagai <br> potensi bahaya, meliputi kebakaran, tumpahan B3, dan kecelakaan kerja, sesuai dengan SMK3 dan peraturan perundang-undangan yang berlaku <br> (UU No. 1 Tahun 1970 tentang Keselamatan Kerja).</p>
         </div>

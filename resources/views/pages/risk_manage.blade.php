@@ -58,7 +58,7 @@
     {{-- NAVBAR --}}
     @include('layouts.navbar')
 
-    <div class="container max-w-5xl mx-auto py-5">
+    <div class="container max-w-5xl mx-auto py-5 pt-5 mt-5">
 
         <!-- Hero -->
         <section class="text-center mb-5">

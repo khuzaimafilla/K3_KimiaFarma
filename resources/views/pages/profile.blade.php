@@ -75,7 +75,7 @@
 <body>
     @include('layouts.navbar')
 
-    <div class="container max-w-5xl mx-auto py-5">
+    <div class="container max-w-5xl mx-auto py-5 pt-5 mt-5">
         <!-- Hero-like Intro Section -->
         <section class="text-center mb-5">
             <h1 class="display-4 fw-bold text-primary mb-4">Profil Perusahaan</h1>
