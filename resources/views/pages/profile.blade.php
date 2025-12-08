@@ -1,6 +1,7 @@
 {{-- resources/views/pages/profile.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,23 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .navbar {
             background-color: #003366;
         }
-        .navbar-brand, .nav-link {
+
+        .navbar-brand,
+        .nav-link {
             color: white !important;
         }
+
         .section-title {
             text-align: center;
             margin-bottom: 40px;
             font-weight: 600;
             color: #003366;
         }
+
         .profile-card {
             border: none;
             border-radius: 12px;
@@ -30,14 +36,17 @@
             transition: all 0.3s ease;
             overflow: hidden;
         }
+
         .profile-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
+
         .header-custom {
             padding: 1.5rem;
             border-bottom: 1px solid #dee2e6;
         }
+
         .icon-circle {
             width: 50px;
             height: 50px;
@@ -47,11 +56,13 @@
             justify-content: center;
             margin-right: 1rem;
         }
+
         .bullet-point {
             display: flex;
             align-items: flex-start;
             margin-bottom: 0.5rem;
         }
+
         .bullet {
             width: 6px;
             height: 6px;
@@ -61,6 +72,7 @@
             margin-right: 0.75rem;
             flex-shrink: 0;
         }
+
         footer {
             background: #003366;
             color: white;
@@ -72,6 +84,7 @@
         }
     </style>
 </head>
+
 <body>
     @include('layouts.navbar')
 
@@ -79,7 +92,9 @@
         <!-- Hero-like Intro Section -->
         <section class="text-center mb-5">
             <h1 class="display-4 fw-bold text-primary mb-4">Profil Perusahaan</h1>
-            <p class="lead text-muted mb-5">PT Kimia Farma Sejahtera adalah bagian dari Kimia Farma Group yang bergerak di industri manufaktur kimia dan layanan kesehatan. Produk meliputi cat, deterjen, pupuk, serta layanan kefarmasian. Perusahaan memiliki risiko tinggi karena penggunaan B3 dalam berbagai proses produksi.</p>
+            <p class="lead text-muted mb-5">PT Kimia Farma Sejahtera adalah bagian dari Kimia Farma Group yang bergerak
+                di industri manufaktur kimia dan layanan kesehatan. Produk meliputi cat, deterjen, pupuk, serta layanan
+                kefarmasian. Perusahaan memiliki risiko tinggi karena penggunaan B3 dalam berbagai proses produksi.</p>
         </section>
 
         <!-- Characteristics Section -->
@@ -89,11 +104,6 @@
             <div class="col-md-4">
                 <div class="card profile-card h-100">
                     <div class="header-custom bg-light d-flex align-items-center">
-                        <div class="icon-circle bg-primary text-white">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
                         <h3 class="mb-0 fw-bold">Area Produksi</h3>
                     </div>
                     <div class="card-body p-4 small text-muted">
@@ -118,11 +128,6 @@
             <div class="col-md-4">
                 <div class="card profile-card h-100">
                     <div class="header-custom bg-light d-flex align-items-center">
-                        <div class="icon-circle bg-success text-white">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/>
-                            </svg>
-                        </div>
                         <h3 class="mb-0 fw-bold">Gudang B3</h3>
                     </div>
                     <div class="card-body p-4 small text-muted">
@@ -149,7 +154,8 @@
                     <div class="header-custom bg-light d-flex align-items-center">
                         <div class="icon-circle bg-purple text-white">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9" />
                             </svg>
                         </div>
                         <h3 class="mb-0 fw-bold">Laboratorium QC</h3>
@@ -171,6 +177,21 @@
                     </div>
                 </div>
             </div>
+
+            <!-- === DENAH PABRIK === -->
+            <div class="layout-section">
+                <h2 class="section-title">Denah Tata Letak Pabrik</h2>
+                <div class="layout-card">
+                    <div class="layout-title text-center">
+                        Denah PT Kimia Farma Sejahtera
+                    </div>
+                    <div class="text-center">
+                        <img src="{{ asset('img/denah.png') }}" alt="Denah Pabrik Kimia Farma"
+                            class="layout-img img-fluid">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -180,4 +201,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
