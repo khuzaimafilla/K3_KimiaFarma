@@ -14,6 +14,9 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('Information') }}">Informasi</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('Procedure') }}">Prosedur</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('Apd') }}">APD</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('Smk3') }}">SMK3</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('RiskManage') }}">Manajemen Risiko</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('Audit') }}">Audit K3</a></li>
             </ul>
         </div>
     </div>

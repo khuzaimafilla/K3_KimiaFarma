@@ -32,3 +32,15 @@ Route::get('/procedure', function () {
 Route::get('/apd', function () {
     return view('pages.apd');
 })->name('Apd');
+
+Route::get('/smk3', function () {
+    return view('pages.smk3');
+})->name('Smk3');
+
+Route::get('/risk-manage', function () {
+    return view('pages.risk_manage');
+})->name('RiskManage');
+
+Route::get('/audit', function () {
+    return view('pages.audit');
+})->name('Audit');
