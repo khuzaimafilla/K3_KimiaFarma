@@ -1,121 +1,183 @@
-@extends('layouts.app')
+{{-- resources/views/pages/profile.blade.php --}}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Perusahaan - Kimia Farma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #003366;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #003366;
+        }
+        .profile-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .header-custom {
+            padding: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        .bullet {
+            width: 6px;
+            height: 6px;
+            background-color: currentColor;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            font-style: italic;
+            font-weight: 100;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    @include('layouts.navbar')
 
-@section('title', 'Profile - Kimia Farma')
+    <div class="container max-w-5xl mx-auto py-5">
+        <!-- Hero-like Intro Section -->
+        <section class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary mb-4">Profil Perusahaan</h1>
+            <p class="lead text-muted mb-5">PT Kimia Farma Sejahtera adalah bagian dari Kimia Farma Group yang bergerak di industri manufaktur kimia dan layanan kesehatan. Produk meliputi cat, deterjen, pupuk, serta layanan kefarmasian. Perusahaan memiliki risiko tinggi karena penggunaan B3 dalam berbagai proses produksi.</p>
+        </section>
 
-@section('content')
-    <div class="mb-8 text-center mt-10">
-        <h1 class="text-3xl font-bold text-blue-600 mb-2">Profil Perusahaan</h1>
-        <p class="text-gray-600">PT Kimia Farma Sejahtera adalah bagian dari Kimia Farma Group yang bergerak di bidang
-            industri manufaktur kimia dan layanan kesehatan. <br> Produk yang dihasilkan antara lain cat, deterjen, pupuk,
-            serta layanan kefarmasian di apotek. <br> Perusahaan ini berperan penting namun juga memiliki risiko tinggi
-            karena penggunaan Bahan Berbahaya dan Beracun (B3).
-        </p>
-    </div>
-
-    <div class="px-4 py-6 sm:px-0">
-        <h3 class="text-lg leading-6 font-medium text-gray-900 mb-8 text-center">Karakteristik Utama Perusahaan</h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {{-- Card 1: Area Produksi --}}
-            <div class="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div class="p-6 border-b border-gray-100 bg-blue-50">
-                    <div class="flex items-center space-x-3">
-                        <div class="p-2 bg-blue-100 rounded-lg">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Characteristics Section -->
+        <h2 class="section-title">Karakteristik Utama Perusahaan</h2>
+        <div class="row g-4">
+            <!-- CARD 1: Area Produksi -->
+            <div class="col-md-4">
+                <div class="card profile-card h-100">
+                    <div class="header-custom bg-light d-flex align-items-center">
+                        <div class="icon-circle bg-primary text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-900">Area Produksi</h4>
+                        <h3 class="mb-0 fw-bold">Area Produksi</h3>
                     </div>
-                </div>
-                <div class="p-6 space-y-4">
-                    <p class="text-sm text-gray-700 leading-relaxed">Area ini adalah jantung dari operasi manufaktur PT Kimia Farma Sejahtera, di mana bahan baku diubah menjadi produk jadi seperti cat, deterjen, dan pupuk. Area ini memiliki beberapa sub-bagian kritis:</p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Proses Pencampuran (Mixing/Blending): Di sinilah bahan baku padat dan cair, termasuk B3, digabungkan dalam tangki pencampur besar. Proses ini memerlukan akurasi takaran yang tinggi untuk menjamin kualitas produk. Risikonya mencakup paparan debu (partikulat) dari bahan padat, uap (vapor) dari pelarut, serta potensi tumpahan dan percikan bahan kimia korosif atau iritan.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Reaktor Kimia: Merupakan unit proses utama tempat terjadinya sintesis kimia. Operasi di reaktor ini seringkali melibatkan suhu dan tekanan tinggi, serta penggunaan katalis. Ini adalah area dengan risiko paling signifikan, termasuk potensi reaksi tak terkendali (runaway reactions), kebakaran, ledakan, atau pelepasan gas beracun. Oleh karena itu, area ini dilengkapi dengan sistem kontrol proses canggih dan perangkat keselamatan berlapis (Safety Instrumented Systems).</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Pengemasan (Packaging): Setelah produk jadi lolos spesifikasi, produk tersebut dialihkan ke lini pengemasan. Di sini, produk diisi ke dalam kemasan primer (misalnya, botol, kaleng, kantong) dan sekunder (kardus, drum). Risiko di area ini terutama terkait dengan paparan berulang (kronis) terhadap produk saat pengisian, serta bahaya ergonomi akibat aktivitas pengangkatan dan pengemasan manual.</span>
-                        </li>
-                    </ul>
+                    <div class="card-body p-4 small text-muted">
+                        <p class="mb-3">Area inti tempat bahan baku diolah menjadi produk jadi.</p>
+                        <div class="bullet-point text-primary">
+                            <div class="bullet"></div>
+                            <span>Mixing/Blending: Risiko paparan debu, uap, dan tumpahan.</span>
+                        </div>
+                        <div class="bullet-point text-primary">
+                            <div class="bullet"></div>
+                            <span>Reaktor Kimia: Risiko runaway reaction, ledakan, dan kebakaran.</span>
+                        </div>
+                        <div class="bullet-point text-primary">
+                            <div class="bullet"></div>
+                            <span>Pengemasan: Risiko paparan kronis dan ergonomi.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            {{-- Card 2: Gudang B3 --}}
-            <div class="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div class="p-6 border-b border-gray-100 bg-green-50">
-                    <div class="flex items-center space-x-3">
-                        <div class="p-2 bg-green-100 rounded-lg">
-                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            <!-- CARD 2: Gudang B3 -->
+            <div class="col-md-4">
+                <div class="card profile-card h-100">
+                    <div class="header-custom bg-light d-flex align-items-center">
+                        <div class="icon-circle bg-success text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/>
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-900">Gudang B3</h4>
+                        <h3 class="mb-0 fw-bold">Gudang B3</h3>
                     </div>
-                </div>
-                <div class="p-6 space-y-4">
-                    <p class="text-sm text-gray-700 leading-relaxed">Gudang ini adalah fasilitas vital yang dirancang khusus untuk menyimpan bahan baku dan bahan pendukung yang bersifat B3 (mudah terbakar, korosif, beracun, reaktif, dll.). Karakteristiknya diatur secara ketat:</p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Segregasi (Pemisahan): Penyimpanan bahan kimia wajib dipisahkan berdasarkan kelas bahayanya (misalnya, bahan oksidator tidak boleh disimpan berdekatan dengan bahan mudah terbakar) untuk mencegah reaksi berbahaya jika terjadi kebocoran.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Tanggul Penahanan (Secondary Containment): Area penyimpanan dilengkapi dengan sistem penahanan sekunder (seperti bund wall atau bak penampung) yang mampu menampung 110% volume tangki terbesar, untuk mencegah tumpahan meluas ke lingkungan.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Ventilasi Khusus: Dilengkapi dengan sistem sirkulasi udara (baik alami maupun mekanis) yang dirancang untuk mencegah akumulasi uap B3 di dalam ruangan.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Keselamatan Kebakaran: Dilengkapi dengan sistem proteksi kebakaran yang sesuai dengan jenis B3 yang disimpan (misalnya, APAR, hidran, sprinkler, atau sistem busa/foam).</span>
-                        </li>
-                    </ul>
+                    <div class="card-body p-4 small text-muted">
+                        <p class="mb-3">Tempat penyimpanan bahan kimia berbahaya.</p>
+                        <div class="bullet-point text-success">
+                            <div class="bullet"></div>
+                            <span>Segregasi berdasarkan kelas bahaya.</span>
+                        </div>
+                        <div class="bullet-point text-success">
+                            <div class="bullet"></div>
+                            <span>Penahanan tumpahan (110% kapasitas).</span>
+                        </div>
+                        <div class="bullet-point text-success">
+                            <div class="bullet"></div>
+                            <span>Ventilasi khusus pencegah uap kimia.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            {{-- Card 3: Laboratorium QC --}}
-            <div class="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div class="p-6 border-b border-gray-100 bg-purple-50">
-                    <div class="flex items-center space-x-3">
-                        <div class="p-2 bg-purple-100 rounded-lg">
-                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c0 4.97-4.03 9-9 9m9-9c0-4.97 4.03-9 9-9M9 5a9 9 0 019 9m-9-9c0 4.97-4.03 9-9 9m9-9H3M9 5h6" />
+            <!-- CARD 3: Laboratorium QC -->
+            <div class="col-md-4">
+                <div class="card profile-card h-100">
+                    <div class="header-custom bg-light d-flex align-items-center">
+                        <div class="icon-circle bg-purple text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9"/>
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-900">Laboratorium Quality Control</h4>
+                        <h3 class="mb-0 fw-bold">Laboratorium QC</h3>
                     </div>
-                </div>
-                <div class="p-6 space-y-4">
-                    <p class="text-sm text-gray-700 leading-relaxed">Laboratorium QC bertanggung jawab untuk memastikan bahwa bahan baku yang diterima, sampel setengah jadi dari proses produksi, dan produk jadi yang akan dirilis telah memenuhi standar mutu yang ditetapkan.</p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Pengujian Analitik: Laboratorium ini melakukan berbagai pengujian kimia dan fisika, seringkali menggunakan bahan kimia pekat seperti asam kuat (misal, H_2SO_4), basa kuat (misal, NaOH), dan pelarut organik (misal, metanol, aseton) sebagai reagen.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Peralatan Khusus: Menggunakan instrumen analitik canggih (seperti GC, HPLC, Spektrofotometer) dan peralatan gelas laboratorium.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Pengendalian Paparan: Penggunaan lemari asam (fume hood) adalah wajib untuk semua pekerjaan yang menghasilkan uap berbahaya. Selain itu, ketersediaan safety shower dan eyewash station adalah mutlak.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span>Limbah B3 Skala Kecil: Meskipun volume bahan yang digunakan kecil, limbah yang dihasilkan dari sisa pengujian bersifat sangat pekat dan berbahaya, sehingga memerlukan penanganan limbah B3 laboratorium yang terpisah dan terkelola dengan baik.</span>
-                        </li>
-                    </ul>
+                    <div class="card-body p-4 small text-muted">
+                        <p class="mb-3">Mengontrol kualitas bahan baku hingga produk jadi.</p>
+                        <div class="bullet-point text-purple">
+                            <div class="bullet"></div>
+                            <span>Pengujian analitik menggunakan asam/basa kuat.</span>
+                        </div>
+                        <div class="bullet-point text-purple">
+                            <div class="bullet"></div>
+                            <span>Instrumen GC, HPLC, spektrofotometer.</span>
+                        </div>
+                        <div class="bullet-point text-purple">
+                            <div class="bullet"></div>
+                            <span>Fume hood + safety shower wajib.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+
+    <footer>
+        <p>&copy; {{ date('Y') }} PT Kimia Farma Tbk | Sistem Informasi K3</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
